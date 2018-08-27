@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    grimoirelab:
+        image: grimoirelab/full
+        container_name: grimoirelab_dashboards
+        ports:
+          - "5601:5601"
+        volumes:
+          - ./log/:/home/grimoirelab/log
+          - ./config/identities.yaml:/identities.yaml
+          - ./config/projects.json:/projects.json
+          - ./config/project.cfg:/project.cfg
+          - ./config/override.cfg:/override.cfg
+          - ./config/menu.yaml:/menu.yaml
+          - ./config/orgs.json:/home/grimoirelab/orgs.json
+          - ./panels/:/home/grimoirelab/panels/

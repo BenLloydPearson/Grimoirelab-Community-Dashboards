@@ -1,0 +1,11 @@
+---
+- name: Community Dashboards
+  source: git
+  icon: default.png
+  menu:
+    - name: Development Pace
+      panel: /home/grimoirelab/panels/development-velocity.json
+    - name: Organizational Diversity
+      panel: /home/grimoirelab/panels/organizational-diversity.json
+    - name: Contributor Growth
+      panel: /home/grimoirelab/panels/contributor-growth.json

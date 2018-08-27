@@ -1,0 +1,7 @@
+{
+	"Grimoirelab": {
+		"git": [
+                         "https://github.com/chaoss/grimoirelab.git"
+                 ]
+	}
+}

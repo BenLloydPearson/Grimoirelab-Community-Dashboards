@@ -1,0 +1,195 @@
+{
+    "dashboard": {
+        "id": "Git-Contributor-Growth",
+        "value": {
+            "description": "",
+            "hits": 0,
+            "kibanaSavedObjectMeta": {
+                "searchSourceJSON": "{\"highlightAll\":true,\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"git\",\"key\":\"author_bot\",\"negate\":true,\"params\":{\"query\":true,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"true\"},\"query\":{\"match\":{\"author_bot\":{\"query\":true,\"type\":\"phrase\"}}}}],\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+            },
+            "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+            "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":6,\"y\":11,\"w\":6,\"h\":3,\"i\":\"1\"},\"id\":\"git_demographics_attracted_developers\",\"title\":\"Attracted Developers\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":11,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"git_demographics_leaving_developers\",\"title\":\"Last Commit Developers\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":8,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"git_demographics_newcomers\",\"title\":\"Last Attracted Developers\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":6,\"y\":14,\"w\":6,\"h\":3,\"i\":\"4\"},\"id\":\"git_demographics_people_leaving_community\",\"title\":\"Developers getting Inactive\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":6,\"y\":6,\"w\":6,\"h\":2,\"i\":\"6\"},\"id\":\"git_main_numbers\",\"title\":\"Git Summary\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":22,\"w\":12,\"h\":4,\"i\":\"7\"},\"id\":\"git_top_repositories\",\"title\":\"Top Repositories\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":6,\"y\":17,\"w\":6,\"h\":5,\"i\":\"8\"},\"id\":\"git_top_authors\",\"title\":\"Top Authors\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":8,\"i\":\"9\"},\"id\":\"d660aa90-a6de-11e8-8da7-6d649ef26021\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":6,\"y\":8,\"w\":6,\"h\":3,\"i\":\"10\"},\"id\":\"feb5cd60-a6e1-11e8-8b37-b791014bdb4f\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"11\"},\"id\":\"601ca5b0-a6e2-11e8-8b37-b791014bdb4f\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":6,\"y\":3,\"w\":3,\"h\":3,\"i\":\"12\"},\"id\":\"cfb20cd0-a71e-11e8-b7ab-199f06999919\",\"type\":\"visualization\",\"version\":\"6.1.0-3\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":9,\"y\":3,\"w\":3,\"h\":3,\"i\":\"13\"},\"version\":\"6.1.0-3\",\"type\":\"visualization\",\"id\":\"4fcb5d80-a720-11e8-b7ab-199f06999919\"}]",
+            "refreshInterval": {
+                "display": "Off",
+                "pause": false,
+                "value": 0
+            },
+            "timeFrom": "now-2y",
+            "timeRestore": true,
+            "timeTo": "now",
+            "title": "Contributor Growth",
+            "uiStateJSON": "{\"P-1\":{\"title\":\"Attracted Developers\",\"vis\":{\"legendOpen\":false}},\"P-2\":{\"title\":\"Last Commit Developers\",\"vis\":{\"legendOpen\":false}},\"P-3\":{\"title\":\"Last Attracted Developers\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-4\":{\"title\":\"Developers getting Inactive\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-5\":{\"title\":\"Commits\",\"vis\":{\"legendOpen\":false}},\"P-6\":{\"title\":\"Git Summary\"},\"P-7\":{\"title\":\"Top Repositories\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-8\":{\"title\":\"Top Authors\",\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+            "version": 1
+        }
+    },
+    "index_patterns": [
+        {
+            "id": "git",
+            "value": {
+                "fieldFormatMap": "{\"grimoire_creation_date\":{\"id\":\"date\",\"params\":{\"pattern\":\"MMM Do YYYY\"}},\"author_date\":{\"id\":\"date\",\"params\":{\"pattern\":\"MMM Do YYYY\"}},\"new_lines\":{\"id\":\"number\",\"params\":{\"pattern\":\"0\"}},\"lines_added\":{\"id\":\"number\",\"params\":{\"pattern\":\"0\"}},\"lines_removed\":{\"id\":\"number\",\"params\":{\"pattern\":\"0\"}},\"author_min_date\":{\"id\":\"date\",\"params\":{\"pattern\":\"MMM Do YYYY, HH:mm:ss\"}},\"author_max_date\":{\"id\":\"date\",\"params\":{\"pattern\":\"MMM Do YYYY, HH:mm:ss\"}}}",
+                "fields": "[{\"name\":\"Author_bot\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_domain\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_gender\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_gender_acc\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_name\",\"type\":\"string\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_org_name\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_user_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Author_uuid\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_bot\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_domain\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_gender\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_gender_acc\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_name\",\"type\":\"string\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_org_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_user_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Commit_uuid\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"author_bot\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_date\",\"type\":\"date\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_domain\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_gender\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_gender_acc\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_org_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_user_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"author_uuid\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"commit_date\",\"type\":\"date\",\"count\":2,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"committer_domain\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"committer_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"files\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"git_author_domain\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"git_uuid\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"github_repo\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"grimoire_creation_date\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"hash\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"hash_short\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"is_git_commit\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"lines_added\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"lines_changed\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"lines_removed\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"message\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"message_analyzed\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"metadata__enriched_on\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metadata__gelk_backend_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metadata__gelk_version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metadata__timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metadata__updated_on\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"origin\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"project\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"project_1\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"repo_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"tag\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"time_to_commit_hours\",\"type\":\"number\",\"count\":1,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"title\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"tz\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"url_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utc_author\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utc_commit\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"uuid\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]",
+                "timeFieldName": "grimoire_creation_date",
+                "title": "git"
+            }
+        }
+    ],
+    "searches": [],
+    "visualizations": [
+        {
+            "id": "git_demographics_attracted_developers",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_demographics_attracted_developers",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"title\":\"New Visualization\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"Attracted Developers\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"author_min_date\",\"interval\":\"M\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+            }
+        },
+        {
+            "id": "git_demographics_leaving_developers",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_demographics_leaving_developers",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"title\":\"git_demographics_attracted_developers\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"customLabel\":\"Attracted Developers\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"author_max_date\",\"interval\":\"M\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}}],\"listeners\":{}}"
+            }
+        },
+        {
+            "id": "git_demographics_newcomers",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_demographics_newcomers",
+                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                "version": 1,
+                "visState": "{\"title\":\"git_demographics_newcomers\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"author_min_date\",\"customLabel\":\"First Commit Date\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Commits\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"3\",\"customLabel\":\"Author\"}}],\"listeners\":{}}"
+            }
+        },
+        {
+            "id": "git_demographics_people_leaving_community",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_demographics_people_leaving_community",
+                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                "version": 1,
+                "visState": "{\"title\":\"git_demographics_people_leaving_community\",\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Commits\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"author_max_date\",\"customLabel\":\"Last Commit Date\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_range\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_max_date\",\"ranges\":[{\"from\":\"now-12M\",\"to\":\"now-6M\"}],\"customLabel\":\"Period of getting inactive (last commit 6 months ago)\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"author_name\",\"size\":30,\"order\":\"desc\",\"orderBy\":\"3\",\"customLabel\":\"Author\"}}],\"listeners\":{}}"
+            }
+        },
+        {
+            "id": "git_main_numbers",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_main_numbers",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"id\": \"1\", \"schema\": \"metric\", \"params\": {\"json\": \"{\\\"precision_threshold\\\": 10000}\", \"field\": \"hash\", \"customLabel\": \"# Commits\"}, \"type\": \"cardinality\"}, {\"id\": \"2\", \"schema\": \"metric\", \"params\": {\"json\": \"{\\\"precision_threshold\\\": 3000}\", \"field\": \"author_uuid\", \"customLabel\": \"# Authors\"}, \"type\": \"cardinality\"}, {\"id\": \"3\", \"schema\": \"metric\", \"params\": {\"json\": \"{\\\"precision_threshold\\\": 3000}\", \"field\": \"repo_name\", \"customLabel\": \"# Repositories\"}, \"type\": \"cardinality\"}], \"title\": \"git_main_numbers\", \"listeners\": {}, \"params\": {\"fontSize\": \"12\", \"metric\": {\"labels\": {\"show\": true}, \"colorSchema\": \"Green to Red\", \"style\": {\"bgFill\": \"#000\", \"fontSize\": \"12\", \"labelColor\": false, \"subText\": \"\", \"bgColor\": false}, \"percentageMode\": false, \"metricColorMode\": \"None\", \"useRanges\": false, \"colorsRange\": [{\"from\": 0, \"to\": 10000}], \"invertColors\": false}}, \"type\": \"metric\"}"
+            }
+        },
+        {
+            "id": "git_top_repositories",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+                },
+                "title": "git_top_repositories",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"title\":\"git_top_repositories\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"hash\",\"json\":\"{\\\"precision_threshold\\\": 10000}\",\"customLabel\":\"Commits\"}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"repo_name\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Repository\"}},{\"id\":\"3\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_uuid\",\"json\":\"{\\\"precision_threshold\\\": 3000}\",\"customLabel\":\"Authors\"}},{\"id\":\"4\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"author_org_name\",\"json\":\"{\\\"precision_threshold\\\": 3000}\",\"customLabel\":\"Organizations\"}},{\"id\":\"7\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_added\",\"customLabel\":\"Added Lines\"}},{\"id\":\"8\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_removed\",\"customLabel\":\"Removed Lines\"}},{\"id\":\"5\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_changed\",\"customLabel\":\"Avg. LInes/Commit\"}},{\"id\":\"6\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"files\",\"customLabel\":\"Avg. Files/Commit\"}}],\"listeners\":{}}"
+            }
+        },
+        {
+            "id": "git_top_authors",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true,\"default_field\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+                },
+                "title": "git_top_authors",
+                "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+                "version": 1,
+                "visState": "{\"title\":\"git_top_authors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Commits\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Author_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"project\",\"json\":\"{\\\"precision_threshold\\\": 3000}\",\"customLabel\":\"Projects\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_added\",\"customLabel\":\"Added Lines\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"lines_removed\",\"customLabel\":\"Removed Lines\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"files\",\"customLabel\":\"Avg. Files\"}}]}"
+            }
+        },
+        {
+            "id": "d660aa90-a6de-11e8-8da7-6d649ef26021",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+                },
+                "title": "Commits Per Contributor Histogram",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"title\":\"Commits Per Contributor Histogram\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Total Commits\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Total Commits\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Commits\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Author_name\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}}]}"
+            }
+        },
+        {
+            "id": "feb5cd60-a6e1-11e8-8b37-b791014bdb4f",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{}"
+                },
+                "title": "Cumulative Contributors Over Time",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"title\":\"Cumulative Contributors Over Time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=git, metric=cardinality:Author_uuid , timefield=author_min_date).cusum().label(label=\\\"Total Contributors\\\"), .es(index=git, metric=cardinality:Author_uuid , timefield=author_min_date).cusum().label(label=\\\"Trend\\\").trend()\",\"interval\":\"1M\"},\"aggs\":[]}"
+            }
+        },
+        {
+            "id": "601ca5b0-a6e2-11e8-8b37-b791014bdb4f",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+                },
+                "title": "Contributions Per Author Over Time",
+                "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+                "version": 1,
+                "visState": "{\"title\":\"Contributions Per Author Over Time\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"commit_date\",\"interval\":\"M\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Month\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Author_name\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}}]}"
+            }
+        },
+        {
+            "id": "cfb20cd0-a71e-11e8-b7ab-199f06999919",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+                },
+                "title": "Authors Per Timezone Histogram",
+                "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+                "version": 1,
+                "visState": "{\"title\":\"Authors Per Timezone Histogram\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Author\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Author\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Author_name\",\"customLabel\":\"Author\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"tz\",\"interval\":1,\"extended_bounds\":{},\"customLabel\":\"Timezone\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Author_name\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}}]}"
+            }
+        },
+        {
+            "id": "4fcb5d80-a720-11e8-b7ab-199f06999919",
+            "value": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\":\"git\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+                },
+                "title": "Commits Per Author by Timezone Histogram",
+                "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+                "version": 1,
+                "visState": "{\"title\":\"Commits Per Author by Timezone Histogram\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"tz\",\"interval\":1,\"extended_bounds\":{},\"customLabel\":\"Timezone\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Author_name\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Author\"}}]}"
+            }
+        }
+    ]
+}

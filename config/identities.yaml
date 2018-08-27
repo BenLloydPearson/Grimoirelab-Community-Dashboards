@@ -1,0 +1,6 @@
+- profile:
+    name: User 1
+  email:
+    - email@example.com
+  enrollments:
+    - organization: My Company
