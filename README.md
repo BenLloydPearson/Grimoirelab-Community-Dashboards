@@ -25,6 +25,8 @@ For convenience, this repo includes everything you need to generate a simple das
 
 This will setup a [grimoirelab/full container](https://hub.docker.com/r/grimoirelab/full/) and configure it to use these dashboards.
 
+To view the dashboards, open your web browser and navigte to http://localhost:5601
+
 If you use another method, you'll need to configure Kibiter to use config/menu.yaml and the dashboards found in the panels directory. Please review the [Grimoirelab Tutorial](https://grimoirelab.gitbooks.io/tutorial/grimoireelk/intro.html) for more information about this.
 
 ## Usage
