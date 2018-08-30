@@ -10,6 +10,7 @@ services:
           - ./log/:/home/grimoirelab/log
           - ./config/identities.yaml:/identities.yaml
           - ./config/projects.json:/projects.json
+          - ./config/dashboard.cfg:/dashboard.cfg
           - ./config/project.cfg:/project.cfg
           - ./config/override.cfg:/override.cfg
           - ./config/menu.yaml:/menu.yaml

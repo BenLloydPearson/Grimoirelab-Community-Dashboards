@@ -1,7 +1,24 @@
+
 {
-	"Grimoirelab": {
-		"git": [
-                         "https://github.com/chaoss/grimoirelab.git"
-                 ]
-	}
+    "GrimoireLab": {
+        "git": [
+            "https://github.com/chaoss/grimoirelab",
+            "https://github.com/chaoss/grimoirelab-bestiary",
+            "https://github.com/chaoss/grimoirelab-ceres",
+            "https://github.com/chaoss/grimoirelab-elk",
+            "https://github.com/chaoss/grimoirelab-hatstall",
+            "https://github.com/chaoss/grimoirelab-kidash",
+            "https://github.com/chaoss/grimoirelab-kingarthur",
+            "https://github.com/chaoss/grimoirelab-manuscripts",
+            "https://github.com/chaoss/grimoirelab-sirmordred",
+            "https://github.com/chaoss/grimoirelab-perceval",
+            "https://github.com/chaoss/grimoirelab-perceval-mozilla",
+            "https://github.com/chaoss/grimoirelab-perceval-opnfv",
+            "https://github.com/chaoss/grimoirelab-perceval-puppet",
+            "https://github.com/chaoss/grimoirelab-sortinghat",
+            "https://github.com/chaoss/grimoirelab-sigils",
+            "https://github.com/chaoss/grimoirelab-tutorial"
+         ]
+    }
 }
+
