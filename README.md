@@ -54,5 +54,6 @@ Ben Lloyd Pearson: ben.pearson@oath.com
 
 ## License
 
-This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE-GPL-3.0-only) open source license. Please refer to [LICENSE](LICENSE) for the full terms.
+This project is licensed under the terms of the [MIT](LICENSE-MIT) open source license. Please refer to [LICENSE](LICENSE) for the full terms.
+
 
